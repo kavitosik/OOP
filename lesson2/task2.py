@@ -22,11 +22,11 @@ def start():
             price = input('Введите цену: ')
             book = Book(name, year, izdatel, genre, author, price)
             books_info[name] = [f'Название: {name}\n',
-                                     f'Год: {year}\n',
-                                     f'Издатель: {izdatel}\n',
-                                     f'Жанр: {genre}\n',
-                                     f'Автор: {author}\n',
-                                     f'Цена: {price}\n',]
+                                f'Год: {year}\n',
+                                f'Издатель: {izdatel}\n',
+                                f'Жанр: {genre}\n',
+                                f'Автор: {author}\n',
+                                f'Цена: {price}\n',]
         if request == 'получить данные':
             name = input('Введите название искомой книги: ')
             print('Вот данные по вашей книге:\n')
