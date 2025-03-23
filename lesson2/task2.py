@@ -6,10 +6,10 @@ class Book:
         self.genre = genre
         self.author = author
         self.price = price
-        self.books_info = {}
 
 
 def start():
+    books_info = {}
     request = input('Что вы хотите сделать?(ввести данные/получить данные/'
                     'редактировать данные/остановить):\n')
     while request.lower() != 'остановить':
@@ -21,7 +21,7 @@ def start():
             author = input('Введите автора: ')
             price = input('Введите цену: ')
             book = Book(name, year, izdatel, genre, author, price)
-            book.books_info[name] = [f'Название: {name}\n',
+            books_info[name] = [f'Название: {name}\n',
                                      f'Год: {year}\n',
                                      f'Издатель: {izdatel}\n',
                                      f'Жанр: {genre}\n',
@@ -30,4 +30,4 @@ def start():
         if request == 'получить данные':
             name = input('Введите название искомой книги: ')
             print('Вот данные по вашей книге:\n')
-            print
+            print(books_info[name])
